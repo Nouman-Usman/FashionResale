@@ -6,3 +6,189 @@
   --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
 }
 
+/* ==========================================================================
+   HIGHLY PROFESSIONAL PREMIUM EDITORIAL LIGHT THEME OVERRIDES (Swiss/Classic Minimalist)
+   ========================================================================== */
+
+/* Warm, high-end gallery alabaster paper background & deep charcoal ink print */
+.light-theme {
+  background-color: #fcfbf9 !important; /* Premium archival paper */
+  color: #1a1a1a !important; /* Elegant black ink */
+}
+
+/* Page context backgrounds resets */
+.light-theme,
+.light-theme .bg-stone-950,
+.light-theme .bg-stone-950/40,
+.light-theme .bg-stone-950/75,
+.light-theme .bg-stone-950/20 {
+  background-color: #fcfbf9 !important;
+}
+
+/* Semi-transparent blur components */
+.light-theme .bg-stone-950/80 {
+  background-color: rgba(255, 255, 255, 0.96) !important;
+  backdrop-filter: blur(20px) !important;
+}
+
+/* Elegant Cards - Crisp white with an extremely subtle micro shadow list */
+.light-theme .bg-stone-900,
+.light-theme .bg-stone-900/50,
+.light-theme .bg-stone-900/60,
+.light-theme .bg-stone-900/40,
+.light-theme .bg-stone-900/45,
+.light-theme .bg-stone-900/5,
+.light-theme .bg-stone-900/30 {
+  background-color: #ffffff !important;
+  border-color: #e6e5e0 !important;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.02), 0 10px 30px -10px rgba(27, 25, 24, 0.04) !important;
+}
+
+/* Fine-hairline classic borders */
+.light-theme .border-stone-900,
+.light-theme .border-stone-900/80,
+.light-theme .border-stone-900/60,
+.light-theme .border-stone-850,
+.light-theme .border-stone-800,
+.light-theme .border-stone-800/80,
+.light-theme .border-stone-800/15 {
+  border-color: #ededeb !important; /* Extremely high-end light boundary */
+}
+
+/* Typography elements */
+.light-theme .text-stone-100,
+.light-theme .text-stone-200 {
+  color: #111111 !important; /* Deepest ink black */
+  font-weight: 600;
+}
+
+.light-theme .text-stone-300 {
+  color: #2b2927 !important; /* Dark solid charcoal */
+}
+
+.light-theme .text-stone-400 {
+  color: #4a4744 !important; /* Medium graphic charcoal */
+}
+
+.light-theme .text-stone-500,
+.light-theme .text-stone-605 {
+  color: #706e6a !important; /* Beautiful concrete grey */
+}
+
+.light-theme .text-stone-600 {
+  color: #9c9994 !important; /* Light design grey */
+}
+
+/* High contrast premium greens (Sustainability) */
+.light-theme .text-emerald-400 {
+  color: #0f5132 !important; /* Dark pine green for sustainable luxury feel */
+}
+.light-theme .bg-emerald-500/10,
+.light-theme .bg-emerald-500/5 {
+  background-color: #e8f5e9 !important; /* Clean soft jade wash */
+}
+.light-theme .border-emerald-500/10,
+.light-theme .border-emerald-500/20 {
+  border-color: #c8e6c9 !important;
+}
+
+/* High contrast premium gold-ambers (Heritage Gold) */
+.light-theme .text-amber-500 {
+  color: #78350f !important; /* Elegant wood amber-900 */
+}
+.light-theme .bg-amber-500/10,
+.light-theme .bg-amber-500/5 {
+  background-color: #fef3c7 !important; /* Soft sand gold wash */
+}
+.light-theme .border-amber-500/15,
+.light-theme .border-amber-500/20 {
+  border-color: #fde68a !important;
+}
+
+/* High contrast premium teals (Digital Trust) */
+.light-theme .text-teal-400 {
+  color: #115e59 !important; /* Deep luxury teal */
+}
+.light-theme .bg-teal-500/10,
+.light-theme .bg-teal-500/5 {
+  background-color: #e0f2fe !important; /* Soft mist blue wash */
+}
+.light-theme .border-teal-500/15,
+.light-theme .border-teal-500/20 {
+  border-color: #bae6fd !important;
+}
+
+/* Navigation bar styling */
+.light-theme nav {
+  background-color: rgba(252, 251, 249, 0.92) !important;
+  border-bottom-color: #ededeb !important;
+}
+.light-theme nav button {
+  color: #4a4744 !important;
+  font-weight: 500;
+}
+.light-theme nav button:hover {
+  color: #111111 !important;
+}
+
+/* Fine input boxes */
+.light-theme input,
+.light-theme select,
+.light-theme textarea {
+  background-color: #ffffff !important;
+  color: #111111 !important;
+  border: 1px solid #dcdbd5 !important;
+  border-radius: 8px !important;
+}
+.light-theme input::placeholder {
+  color: #a3a19a !important;
+}
+
+/* Inner simulator values alignment */
+.light-theme .font-mono.text-stone-300 {
+  color: #1a1a1a !important;
+}
+.light-theme .font-mono.text-stone-400 {
+  color: #3e3c3a !important;
+}
+.light-theme .font-mono.text-stone-500 {
+  color: #706e6a !important;
+}
+
+/* Grid & Vector Data Viz line colors */
+.light-theme svg line {
+  stroke: #e6e5e0 !important;
+}
+.light-theme text {
+  fill: #1a1a1a !important;
+}
+.light-theme text[fill="#78716c"] {
+  fill: #706e6a !important; 
+}
+.light-theme text[fill="#f59e0b"] {
+  fill: #78350f !important; 
+}
+.light-theme text[fill="#d97706"] {
+  fill: #78350f !important; 
+}
+
+/* TrustedBy Logo text color rules */
+.light-theme .bg-stone-900/60 .text-stone-200 {
+  color: #111111 !important;
+}
+
+/* Three Canvas Overlays */
+.light-theme .absolute.bg-stone-900/80 {
+  background-color: rgba(255, 255, 255, 0.96) !important;
+}
+.light-theme .text-stone-400 span {
+  color: #111111 !important;
+}
+.light-theme .text-stone-500 {
+  color: #57534e !important;
+}
+
+/* Scrollbar styling resets */
+.light-theme .scrollbar-thin::-webkit-scrollbar-thumb {
+  background-color: #dcdbd5 !important;
+}

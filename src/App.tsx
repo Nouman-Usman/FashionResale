@@ -19,7 +19,9 @@ import {
   Layers,
   HelpCircle,
   Menu,
-  MessageSquareDiff
+  MessageSquareDiff,
+  Sun,
+  Moon
 } from 'lucide-react';
 
 import ThreeCanvas from './components/ThreeCanvas';
@@ -37,6 +39,7 @@ export default function App() {
   const [hasSubscribed, setHasSubscribed] = useState(false);
   const [assignedBadgeNo, setAssignedBadgeNo] = useState<number | null>(null);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [isLightMode, setIsLightMode] = useState(false);
 
   const handleSubscribe = (e: FormEvent) => {
     e.preventDefault();
@@ -54,7 +57,7 @@ export default function App() {
   };
 
   return (
-    <div className="min-h-screen bg-stone-950 text-stone-300 font-sans selection:bg-amber-500 selection:text-stone-950 relative overflow-hidden">
+    <div className={`min-h-screen bg-stone-950 text-stone-300 font-sans selection:bg-amber-500 selection:text-stone-950 relative overflow-hidden ${isLightMode ? 'light-theme' : ''}`}>
       
       {/* Absolute Ambient Background Lights (Floating radial glows) */}
       <div className="absolute top-[10%] left-[-10%] w-[45vw] h-[45vw] bg-amber-500/5 rounded-full blur-[120px] pointer-events-none" />
@@ -89,6 +92,16 @@ export default function App() {
 
           {/* Right Action Metric Node */}
           <div className="hidden sm:flex items-center gap-4">
+            {/* Theme Toggle Button */}
+            <button
+              id="theme-toggle-desktop"
+              onClick={() => setIsLightMode(!isLightMode)}
+              className="p-2 rounded-xl bg-stone-900 hover:bg-stone-850 border border-stone-800 transition-all text-stone-300 hover:text-stone-100 flex items-center justify-center cursor-pointer"
+              title={isLightMode ? "Switch to Dark Theme" : "Switch to Light Theme"}
+            >
+              {isLightMode ? <Moon className="w-4 h-4 text-amber-500" /> : <Sun className="w-4 h-4 text-amber-500" />}
+            </button>
+
             <div className="flex flex-col items-end text-right font-mono text-[10px]">
               <div className="flex items-center gap-1.5">
                 <span className="w-1.5 h-1.5 bg-emerald-500 rounded-full animate-ping" />
@@ -104,10 +117,20 @@ export default function App() {
             </button>
           </div>
 
-          {/* Mobile menu trigger */}
-          <button onClick={() => setMobileMenuOpen(!mobileMenuOpen)} className="md:hidden text-stone-400 hover:text-stone-200 focus:outline-none">
-            <Menu className="w-5 h-5" />
-          </button>
+          {/* Mobile menu trigger and toggle */}
+          <div className="flex items-center gap-2 md:hidden">
+            <button
+              id="theme-toggle-mobile"
+              onClick={() => setIsLightMode(!isLightMode)}
+              className="p-2 rounded-xl bg-stone-900 border border-stone-800 text-stone-300 flex items-center justify-center cursor-pointer"
+              title={isLightMode ? "Switch to Dark Theme" : "Switch to Light Theme"}
+            >
+              {isLightMode ? <Moon className="w-4 h-4 text-amber-500" /> : <Sun className="w-4 h-4 text-amber-500" />}
+            </button>
+            <button onClick={() => setMobileMenuOpen(!mobileMenuOpen)} className="text-stone-400 hover:text-stone-200 focus:outline-none">
+              <Menu className="w-5 h-5" />
+            </button>
+          </div>
         </div>
 
         {/* Mobile menu overlay */}
