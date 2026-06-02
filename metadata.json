@@ -1,0 +1,6 @@
+{
+  "name": "Fashion Resale",
+  "description": "A sleek, highly professional dark-mode SaaS landing page for a sustainable circular fashion marketplace with interactive 3D visuals, live bidding/bargain simulators, and rich performance metrics.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
